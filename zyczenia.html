@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Życzenia Wielkanocne</title>
+  <style>
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="greeting"></h1>
+  <p id="message"></p>
+
+  <script>
+    window.onload = function() {
+      var params = new URLSearchParams(window.location.search);
+      var name = params.get('name');
+      var gender = params.get('gender');
+      var greeting = document.getElementById('greeting');
+      var message = document.getElementById('message');
+
+      if (gender === "dziewczynko") {
+        greeting.textContent = "Wesołych Świąt, Pani " + name + "!";
+        message.textContent = "Z okazji Świąt Wielkiej Nocy pragniemy przekazać Pani najserdeczniejsze życzenia zdrowia, spokoju, radości, zadowolenia z pracy oraz mnóstwa cierpliwości!, Pani Nauczycielko!.";
+      } else {
+        greeting.textContent = "Wesołych Świąt, Panie " + name + "!";
+        message.textContent = "Z okazji Świąt Wielkiej Nocy pragniemy przekazać Panu najserdeczniejsze życzenia zdrowia, spokoju, radości, zadowolenia z pracy oraz mnóstwa cierpliwości!, Panie Nauczycielu!";
+      }
+    };
+</script>
+  <!-- Dodajemy gifa z kurczakiem wielkanocnym -->
+  <img src="https://gifyagusi.pl/img/2020/04/09/obrazek-gif/wielkanocne-kurczaki/Wykluty%20z%20jajka%20kurczak.gif" alt="Kurczak Wielkanocny">
+  </script>
+</body>
+</html>
